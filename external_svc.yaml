@@ -1,0 +1,17 @@
+kind: "Service"
+apiVersion: "v1"
+metadata:
+  name: "external-redis"
+  namespace: production
+spec:
+  type: ExternalName
+  externalName: webapp-redis.bkghqb.ng.0001.use1.cache.amazonaws.com
+---
+kind: "Service"
+apiVersion: "v1"
+metadata:
+  name: "external-postgres"
+  namespace: production
+spec:
+  type: ExternalName
+  externalName: webapp-rds.c8olj578vq6n.us-east-1.rds.amazonaws.com 
